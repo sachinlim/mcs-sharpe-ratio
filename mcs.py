@@ -3,9 +3,13 @@ import pandas as pd
 import pandas_datareader as pdr
 import time
 
+# Number of simulations to be done
+portfolioLimit = int(input('Number of simulations: '))
+
 # Starting the timer to see how long it takes to run the simulation
 start = time.time()
 
+# Stock list fixed for now
 stockList = ['MSFT', 'AAPL', 'V', 'MA', 'NVDA']
 # stockList = ['JNJ', 'UNH', 'PFE', 'LLY', 'ABBV']
 # stockList = ['BRK-B', 'JPM', 'BAC', 'WFC', 'SPGI']
@@ -13,20 +17,19 @@ stockList = ['MSFT', 'AAPL', 'V', 'MA', 'NVDA']
 # stockList = ['XOM', 'CVX', 'COP', 'EOG', 'OXY']
 
 # Importing data from Yahoo Finance into a DataFrame
-startDate = '2017-06-30'    # start date is one trading day earlier because the first values have NaN
+# start date is one trading day earlier because the first values have NaN
+startDate = '2017-06-30'
 endDate = '2019-06-28'
 
 data = pd.DataFrame()
 for stock in stockList:
     data[stock] = pdr.DataReader(stock, 'yahoo', startDate, endDate)['Adj Close'].pct_change()
 
-# Number of simulations
-portfolioLimit = 10
-tradingDays = 252
-riskFreeRate = 0
-
 # Generating tangency portfolios
 portfolioWeights, portfolioReturns, portfolioVolatility, portfolioSharpeRatios = [], [], [], []
+
+tradingDays = 252
+riskFreeRate = 0
 
 for portfolios in range(portfolioLimit):
     # generating 5 columns of random numbers between 0-1 as weightings

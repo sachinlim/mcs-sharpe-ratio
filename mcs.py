@@ -6,15 +6,15 @@ import time
 # Starting the timer to see how long it takes to run the simulation
 start = time.time()
 
-# Importing data from Yahoo Finance into a DataFrame
-startDate = '2017-06-30'    # start date is one trading day earlier because the first values have NaN
-endDate = '2019-06-28'
-
 stockList = ['MSFT', 'AAPL', 'V', 'MA', 'NVDA']
 # stockList = ['JNJ', 'UNH', 'PFE', 'LLY', 'ABBV']
 # stockList = ['BRK-B', 'JPM', 'BAC', 'WFC', 'SPGI']
 # stockList = ['AMT', 'CCI', 'PLD', 'EQIX', 'PSA']
 # stockList = ['XOM', 'CVX', 'COP', 'EOG', 'OXY']
+
+# Importing data from Yahoo Finance into a DataFrame
+startDate = '2017-06-30'    # start date is one trading day earlier because the first values have NaN
+endDate = '2019-06-28'
 
 data = pd.DataFrame()
 for stock in stockList:

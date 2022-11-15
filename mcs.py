@@ -20,13 +20,13 @@ data = pd.DataFrame()
 for stock in stockList:
     data[stock] = pdr.DataReader(stock, 'yahoo', startDate, endDate)['Adj Close'].pct_change()
 
-# Generating tangency portfolios
-portfolioWeights, portfolioReturns, portfolioVolatility, portfolioSharpeRatios = [], [], [], []
-
 # Number of simulations
 portfolioLimit = 10
 tradingDays = 252
 riskFreeRate = 0
+
+# Generating tangency portfolios
+portfolioWeights, portfolioReturns, portfolioVolatility, portfolioSharpeRatios = [], [], [], []
 
 for portfolios in range(portfolioLimit):
     # generating 5 columns of random numbers between 0-1 as weightings

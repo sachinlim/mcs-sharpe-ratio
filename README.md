@@ -1,1 +1,1 @@
-# mcs-sharpe-ratio
+# MCS - Sharpe Ratio

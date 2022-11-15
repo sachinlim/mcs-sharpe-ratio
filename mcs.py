@@ -3,11 +3,17 @@ import pandas as pd
 import pandas_datareader as pdr
 import time
 
-# Number of simulations to be done
-portfolio_limit = int(input('Number of simulations: '))
 
-# Starting the timer to see how long it takes to run the simulation
-start_counter = time.time()
+# Number of simulations to be done
+def user_input():
+    while True:
+        try:
+            return int(input('Enter number of simulations: '))
+        except ValueError:
+            print('Please only enter an integer!')
+
+
+portfolio_limit = user_input()
 
 # Stock list fixed for now
 stock_list = ['MSFT', 'AAPL', 'V', 'MA', 'NVDA']
@@ -15,6 +21,9 @@ stock_list = ['MSFT', 'AAPL', 'V', 'MA', 'NVDA']
 # stockList = ['BRK-B', 'JPM', 'BAC', 'WFC', 'SPGI']
 # stockList = ['AMT', 'CCI', 'PLD', 'EQIX', 'PSA']
 # stockList = ['XOM', 'CVX', 'COP', 'EOG', 'OXY']
+
+# Starting the timer to see how long it takes to run the simulation
+start_counter = time.time()
 
 # Importing data from Yahoo Finance into a DataFrame
 # start date is one trading day earlier because the first values have NaN

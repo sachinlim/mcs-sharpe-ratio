@@ -36,7 +36,6 @@ for stock in stock_list:
 
 # Generating tangency portfolios
 portfolio_weights, portfolio_returns, portfolio_volatility, portfolio_sharpe_ratios = [], [], [], []
-
 trading_days = 252
 risk_free_rate = 0
 
@@ -65,7 +64,6 @@ for portfolios in range(portfolio_limit):
 
     portfolio_sharpe_ratios.append(sharpeRatio)
 
-
 # Storing all random portfolios from simulation
 portfolioSharpeRatios = np.array(portfolio_sharpe_ratios)
 
@@ -82,3 +80,4 @@ end_counter = time.time()
 time = end_counter - start_counter
 
 print("Runtime: " + str(round(time, 2)) + "seconds")
+#

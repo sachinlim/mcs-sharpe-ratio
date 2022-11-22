@@ -1,2 +1,1 @@
 # MCS - Sharpe Ratio
-test

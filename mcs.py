@@ -17,10 +17,6 @@ portfolio_limit = user_input()
 
 # Stock list fixed for now
 stock_list = ['MSFT', 'AAPL', 'V', 'MA', 'NVDA']
-# stockList = ['JNJ', 'UNH', 'PFE', 'LLY', 'ABBV']
-# stockList = ['BRK-B', 'JPM', 'BAC', 'WFC', 'SPGI']
-# stockList = ['AMT', 'CCI', 'PLD', 'EQIX', 'PSA']
-# stockList = ['XOM', 'CVX', 'COP', 'EOG', 'OXY']
 
 # Starting the timer to see how long it takes to run the simulation
 start_counter = time.time()

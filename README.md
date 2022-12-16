@@ -2,6 +2,21 @@
 
 # MCS - Sharpe Ratio
 
+## Prerequisites
+
+The script requires a few installations for extracting and storing of data from the S&P 500. Information is collected from Yahoo Fiannce using [pandas-datareader](https://pydata.github.io/pandas-datareader/).
+
+Installing using `pip`
+
+```
+pip install pandas, numpy, pandas-datareader
+```
+
+On MacOS, `pip3` might need to be used.
+```
+pip3 install pandas, numpy, pandas-datareader
+```
+
 ## Running the script
 
 The number of simulations to be conduected will be asked by the compiler. This will then start the timer and runs the simulations to find the portfolio weightings with the most optimal Sharpe ratio for the time period. 

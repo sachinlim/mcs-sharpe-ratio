@@ -1,3 +1,5 @@
+<img align="right" src="https://cdn-icons-png.flaticon.com/512/9144/9144377.png" width="125">
+
 # MCS - Sharpe Ratio
 
 ## Running the script

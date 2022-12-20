@@ -12,7 +12,7 @@ Installing using `pip`
 pip install pandas, numpy, pandas-datareader
 ```
 
-On MacOS, `pip3` might need to be used.
+On MacOS, `pip3` might need to be used
 ```
 pip3 install pandas, numpy, pandas-datareader
 ```
@@ -33,6 +33,10 @@ The output will look like the screenshot above, and will provide the weightings 
 </p>
 
 Figure 1 shows the results for 4 runs.
+
+### Run Times
+
+One thing to note with the two screenshots above is that the first one is slightly faster to complete. This is due to it running on Python 3.11, while the second screenshot has simulations running with Python 3.10. This improvement was highlighted in the [official documentation](https://docs.python.org/3/whatsnew/3.11.html#summary-release-highlights) as well.
 
 ## Project Aims
 
